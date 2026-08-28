@@ -16,11 +16,13 @@ map("v", ">", ">gv", { desc = "Indent right, keep selection" })
 -- General movement
 map("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope Find files" })
 map("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Telescope Buffers" })
+
 -- Git stuffs
 map("n", "<Leader>fgc", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git Commits" })
 map("n", "<Leader>fgs", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git Status" })
 map("n", "<Leader>fgb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git Branches" })
 map("n", "<Leader>fgf", "<cmd>Telescope git_files<cr>", { desc = "Telescope Git Files" })
+
 -- Drip
 map("n", "<Leader>fc", "<cmd>Telescope colorscheme enable_preview=true<cr>", { desc = "Telescope change colourscheme" })
 

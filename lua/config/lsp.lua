@@ -1,6 +1,12 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+vim.lsp.config("*", {
+	capabilities = capabilities,
+})
+
 require("mason-lspconfig").setup({
 	ensure_installed = { "lua_ls", "pyright" },
-	automatic_enable = true, -- calls vim.lsp.enable() for installed servers automatically
+	automatic_enable = true,
 })
 
 vim.diagnostic.config({
@@ -15,10 +21,9 @@ vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			diagnostics = {
-				globals = { "vim" }, -- tells lua_ls that `vim` is a known global, not an error
+				globals = { "vim" },
 			},
 			workspace = {
-				-- makes lua_ls aware of Neovim's runtime Lua API/types for completion+docs too
 				library = vim.api.nvim_get_runtime_file("", true),
 				checkThirdParty = false,
 			},

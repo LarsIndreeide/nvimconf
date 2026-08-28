@@ -1,5 +1,11 @@
 -- Options, no good order
 
+-- Right click tweaks
+vim.cmd([[
+  aunmenu PopUp.-2-
+  aunmenu PopUp.How-to\ disable\ mouse
+]])
+
 -- No ugly tilde
 vim.opt.fillchars = { eob = " " }
 vim.opt.number = true
