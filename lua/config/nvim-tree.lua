@@ -9,4 +9,4 @@ require("nvim-tree").setup({
 	},
 })
 
-require("nvim-tree.api").tree.open()
+-- require("nvim-tree.api").tree.open()

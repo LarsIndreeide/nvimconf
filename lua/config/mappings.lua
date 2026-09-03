@@ -1,6 +1,8 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+
+
 -- Window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
