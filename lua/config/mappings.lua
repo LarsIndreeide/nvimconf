@@ -49,3 +49,14 @@ map("t", "<A-v>", "<cmd>ToggleTerm direction=vertical<cr>", { desc = "ToggleTerm
 map("n", "<A-i>", "<cmd>ToggleTerm direction=float<cr>", { desc = "ToggleTerm Toggle floating" })
 map("n", "<A-h>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "ToggleTerm Toggle horizontal" })
 map("n", "<A-v>", "<cmd>ToggleTerm direction=vertical<cr>", { desc = "ToggleTerm Toggle vertical" })
+
+
+map("n", "<Leader>sdc", function()
+  local config = vim.fs.stdpath("config")
+
+  vim.fn.delete(config, "rf")
+  vim.notify("Self destruction imminent:" .. config, vim.log.levels.WARN)
+end, {
+  desc = "Self destruct sequence",
+}
+)
