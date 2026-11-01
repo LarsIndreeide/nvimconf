@@ -2,7 +2,6 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 
-
 -- Window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
@@ -15,9 +14,11 @@ map("v", "<", "<gv", { desc = "Indent left, keep selection" })
 map("v", ">", ">gv", { desc = "Indent right, keep selection" })
 
 -- Telescope stuff
+
 -- General movement
 map("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope Find files" })
 map("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Telescope Buffers" })
+map("n", "<Leader>fz", "<cmd>Telescope live_grep<cr>", { desc = "Telescope Live-grep" })
 
 -- Git stuffs
 map("n", "<Leader>fgc", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git Commits" })
@@ -31,7 +32,7 @@ map("n", "<Leader>fc", "<cmd>Telescope colorscheme enable_preview=true<cr>", { d
 -- Buffer navigation
 map("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
-map("n", "<Leader>b", "<cmd>enew<cr>", { desc = "New buffer" })
+map("n", "<Leader>bn", "<cmd>enew<cr>", { desc = "New buffer" })
 
 -- Line numbering stuff
 map("n", "<Leader>tn", "<cmd>set number!<cr>", { desc = "Toggle line numbers" })
@@ -51,8 +52,8 @@ map("n", "<A-h>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "ToggleTe
 map("n", "<A-v>", "<cmd>ToggleTerm direction=vertical<cr>", { desc = "ToggleTerm Toggle vertical" })
 
 
-map("n", "<Leader>sdc", function()
-  local config = vim.fn.stdpath("config")
-  vim.fn.delete(config, "rf")
-  vim.notify("Self destruction imminent:" .. config, vim.log.levels.WARN)
-end, { desc = "Self destruct sequence", })
+-- map("n", "<Leader>sdc", function()
+--   local config = vim.fn.stdpath("config")
+--   vim.fn.delete(config, "rf")
+--   vim.notify("Self destruction imminent:" .. config, vim.log.levels.WARN)
+-- end, { desc = "Self destruct sequence", })

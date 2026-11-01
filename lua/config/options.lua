@@ -1,4 +1,6 @@
 -- Options, no good order
+-- Clipboard :)
+vim.opt.clipboard = "unnamedplus"
 
 -- Right click tweaks
 vim.cmd([[
